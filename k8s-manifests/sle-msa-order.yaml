@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sle-msa-order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sle-msa-order
+  template:
+    metadata:
+      labels:
+        app: sle-msa-order
+    spec:
+      containers:
+      - name: sle-msa-order
+        image: sle-msa-order
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8081
+        env:
+        - name: POSTGRES_USER
+          value: "admin"
+        - name: POSTGRES_PASSWORD
+          value: "admin"
+        - name: POSTGRES_DB
+          value: "db-order"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sle-msa-order
+spec:
+  ports:
+    - port: 8081
+  selector:
+    app: sle-msa-order

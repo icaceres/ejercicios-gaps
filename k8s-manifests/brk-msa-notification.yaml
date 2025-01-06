@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brk-msa-notification
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brk-msa-notification
+  template:
+    metadata:
+      labels:
+        app: brk-msa-notification
+    spec:
+      containers:
+      - name: brk-msa-notification
+        image: brk-msa-notification
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: brk-msa-notification
+spec:
+  ports:
+    - port: 8082
+  selector:
+    app: brk-msa-notification

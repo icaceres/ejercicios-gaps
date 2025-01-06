@@ -1,0 +1,40 @@
+type Query {
+    findAllOrders(page: Int, size: Int): PageOrder!
+    findOrderById(orderId: String): Order
+}
+
+type PageOrder {
+    content: [Order!]!
+    pageable: Pageable
+    totalPages: Int
+    totalElements: Int
+}
+
+type Pageable {
+    pageNumber: Int
+    pageSize: Int
+}
+
+type Order {
+    id: ID!
+    customerName: String!
+    totalAmount: Float!
+    createdAt: String!
+    orderItems: [OrderItem]
+}
+
+type OrderItem {
+    id: ID!
+    productId: ID!
+    quantity: Int!
+    price: Float!
+}
+
+input OrderItemInput {
+    productId: ID!
+    quantity: Int!
+}
+
+type Mutation {
+    createOrder(customerName: String!, items: [OrderItemInput!]!): Order!
+}
