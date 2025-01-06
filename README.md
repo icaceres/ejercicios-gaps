@@ -1,17 +1,4 @@
-cat << 'EOF' > README.md
 # Ejercicios para Reducir GAPs
-
-![Estado del Proyecto](https://img.shields.io/badge/STATUS-En%20Desarrollo-green)
-
-## Índice
-
-- [Descripción](#descripción)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación y Uso](#instalación-y-uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
 
 ## Descripción
 
@@ -34,11 +21,7 @@ ejercicios-gaps/
 ├── ejercicio-bp.drawio.png
 └── README.md
 
-# Ejercicios GAPS
-
-Este repositorio contiene diversos ejercicios y herramientas relacionadas con el desarrollo de aplicaciones en arquitecturas de microservicios, programación orientada a objetos y despliegue en Kubernetes.
-
-## Contenido
+```
 
 ### Directorios
 
@@ -91,31 +74,5 @@ Luego, puedes ejecutarlos con:
 ./install-elk.sh
 ```
 
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas colaborar:
-
-1. Realiza un fork del repositorio.
-2. Crea una nueva rama:
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz commit:
-   ```bash
-   git commit -m 'Agregar nueva funcionalidad'
-   ```
-4. Haz push a la rama:
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ```
-5. Abre un Pull Request.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-## Contacto
-
-Desarrollado por **icaceres**. Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
 
 
